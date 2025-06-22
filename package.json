@@ -1,0 +1,82 @@
+{
+  "name": "split-the-bill",
+  "private": true,
+  "type": "module",
+  "engineStrict": true,
+  "engines": {
+    "node": "22.x",
+    "bun": "please-use-pnpm",
+    "npm": "please-use-pnpm",
+    "pnpm": "10.x"
+  },
+  "scripts": {
+    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
+    "build": "vite build && tsc",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "prepare": "husky",
+    "format": "prettier . --write --config-precedence prefer-file .prettierrc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm run format",
+      "pnpm run lint"
+    ]
+  },
+  "dependencies": {
+    "@radix-ui/react-collapsible": "^1.1.11",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-select": "^2.2.5",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tanstack/react-router": "^1.121.2",
+    "@vercel/analytics": "^1.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "countries-list": "^3.1.1",
+    "lucide-react": "^0.515.0",
+    "motion": "^12.18.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1",
+    "tw-animate-css": "^1.3.4",
+    "vaul": "^1.1.2",
+    "web-vitals": "^5.0.3",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@tailwindcss/vite": "^4.1.10",
+    "@tanstack/eslint-plugin-router": "^1.120.17",
+    "@tanstack/react-router-devtools": "^1.121.12",
+    "@tanstack/router-plugin": "^1.121.13",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.34.0",
+    "vite": "^6.1.0"
+  },
+  "overrides": {
+    "@tanstack/react-router": "^1.121.2"
+  }
+}

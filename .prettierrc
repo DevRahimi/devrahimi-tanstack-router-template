@@ -1,0 +1,30 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
+  "tabWidth": 2,
+  "printWidth": 120,
+  "useTabs": false,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "singleAttributePerLine": true,
+  "importOrder": [
+    "^react(.*)",
+    "^@eslint/(.*)",
+    "^typescript-eslint",
+    "^eslint-plugin-react-hooks",
+    "^eslint-plugin-react-refresh",
+    "@tanstack/(.*)",
+    "<THIRD_PARTY_MODULES>",
+    "@/components[./]",
+    "^[./]",
+    "^.+\\.css$"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true
+}
