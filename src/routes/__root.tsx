@@ -2,7 +2,6 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import appCss from "@/styles/app.css?url";
 import { seo } from "@/utils";
-import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 
@@ -17,8 +16,8 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       ...seo({
-        title: "Split the Bill",
-        description: "Splitting bills, made simple.",
+        title: "TanStack Router Template",
+        description: "DevRahimi's TanStack Router starter template.",
       }),
     ],
     links: [
@@ -53,8 +52,7 @@ function RootComponent() {
   return (
     <>
       <Outlet />
-      {/* <TanStackRouterDevtools /> */}
-      <VercelAnalytics />
+      <TanStackRouterDevtools />
     </>
   );
 }

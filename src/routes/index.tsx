@@ -1,8 +1,4 @@
-import { useCallback, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { useBillStore } from "@/store/bill-store";
-import { FloatingIsland } from "@/components/FloatingIsland";
-import { SplitBreakdown } from "@/components/SplitBreakdown/SplitBreakdown";
 
 // import logo from "../logo.svg";
 
@@ -11,33 +7,20 @@ export const Route = createFileRoute("/")({
 });
 
 function App() {
-  const { setCountry, setVatPercentage, reset } = useBillStore();
-
-  const setDefaults = useCallback(() => {
-    const previouslySelectedCountry = JSON.parse(localStorage.getItem("previously-selected-country") || "null");
-    const previousVatValue = JSON.parse(localStorage.getItem("previous-vat-value") || "null");
-
-    setCountry(previouslySelectedCountry);
-    if (previousVatValue) {
-      setVatPercentage(previousVatValue);
-    }
-  }, [setCountry, setVatPercentage]);
-
-  const handleReset = () => {
-    reset();
-    setDefaults();
-  };
-
-  useEffect(() => {
-    setDefaults();
-  }, [setDefaults]);
-
   return (
-    <div className="min-h-screen container mx-auto w-full max-w-xl p-6">
-      <div className="mb-28">
-        <SplitBreakdown />
-
-        <FloatingIsland handleReset={handleReset} />
+    <div className="h-dvh bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+          <span className="text-orange-500">DevRahimi</span> <span className="text-gray-900">TanStack Router</span>
+        </h1>
+        <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-2xl">
+          Type-safe routing template for modern React applications
+        </p>
+        <div className="mt-6 flex items-center justify-center space-x-2">
+          <div className="w-8 h-1 bg-orange-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+          <div className="w-8 h-1 bg-orange-500 rounded-full"></div>
+        </div>
       </div>
     </div>
   );

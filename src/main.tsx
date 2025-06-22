@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
-import { ThemeProvider } from "./providers/theme-provider";
 import reportWebVitals from "./reportWebVitals";
 import { routeTree } from "./routeTree.gen";
 import "@/styles/app.css";
@@ -33,9 +32,7 @@ if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <StrictMode>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
+      <RouterProvider router={router} />
     </StrictMode>
   );
 }
